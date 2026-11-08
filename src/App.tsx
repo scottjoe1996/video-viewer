@@ -1,7 +1,13 @@
-import VideoPlayer from "./VideoPlayer";
+import { Routes, Route } from "react-router";
+
+import CataloguePage from "./pages/CataloguePage";
 
 function App() {
-  return <VideoPlayer src="/test-videos/spinning-earth.mp4" />;
+  return (
+    <Routes>
+      <Route path="/catalogue/*" element={<CataloguePage />} />
+    </Routes>
+  );
 }
 
 export default App;
