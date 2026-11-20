@@ -19,14 +19,14 @@ class CatalogueApi {
   }
 
   private async fetchCatalogue(_directory: string): Promise<CatalogueItem[]> {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     return [
-      { type: "folder", directory: "/directory-1" },
-      { type: "folder", directory: "/directory-2" },
-      { type: "folder", directory: "/directory-3" },
-      { type: "folder", directory: "/directory-4" },
-      { type: "video", directory: "/test-videos/spinning-earth.mp4" },
+      { type: "folder", directory: "directory-1" },
+      { type: "folder", directory: "directory-2" },
+      { type: "folder", directory: "directory-3" },
+      { type: "folder", directory: "directory-4" },
+      { type: "video", directory: "spinning-earth.mp4" },
     ];
   }
 }

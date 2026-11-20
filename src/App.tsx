@@ -7,18 +7,20 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/catalogue" />} />
-      <Route
-        path="/catalogue/*"
-        element={
-          <Suspense fallback={<LoadingSpinner />}>
-            <CataloguePage />
-          </Suspense>
-        }
-      />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <div className="bg-mist-800 p-2 h-screen">
+      <Routes>
+        <Route path="/" element={<Navigate to="/catalogue" />} />
+        <Route
+          path="/catalogue/*"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <CataloguePage />
+            </Suspense>
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
   );
 }
 
