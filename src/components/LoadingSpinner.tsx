@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 const LoadingSpinner: React.FC = () => {
   return (
     <div role="status" className="flex justify-center items-center h-100">
-      <Loader2 className="animate-spin" />
+      <Loader2 className="animate-spin" color="white" />
       <span className="sr-only">Loading...</span>
     </div>
   );

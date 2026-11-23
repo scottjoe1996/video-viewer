@@ -9,11 +9,12 @@ const api = new CatalogueApi();
 const CatalogueCard: React.FC<{
   icon: React.ComponentType<any>;
   title: string;
-}> = ({ icon: Icon, title }) => (
+  to: string;
+}> = ({ icon: Icon, title, to }) => (
   <li className="rounded shadow-md bg-lime-400 shadow-lime-400 ">
     <NavLink
-      className="rounded p-2 inline-block bg-lime-700 text-white transition-transform hover:bg-lime-600 hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none"
-      to={title}
+      className="rounded p-2 inline-block bg-lime-700 text-white transition-transform hover:bg-lime-600 hover:-translate-y-0.5 focus:bg-lime-600 focus:-translate-y-0.5 focus:outline-none"
+      to={to}
     >
       <Icon className="inline mr-2" />
       {title}
@@ -36,6 +37,7 @@ const CataloguePage: React.FC = () => {
                 key={catalogue.directory}
                 icon={Folder}
                 title={catalogue.directory}
+                to={catalogue.directory}
               />
             );
           }
@@ -45,6 +47,7 @@ const CataloguePage: React.FC = () => {
               key={catalogue.directory}
               icon={SquarePlay}
               title={catalogue.directory}
+              to={`/video/${path}/${catalogue.directory}`}
             />
           );
         })}

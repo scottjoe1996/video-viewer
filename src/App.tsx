@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router";
 import CataloguePage from "./pages/CataloguePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import LoadingSpinner from "./components/LoadingSpinner";
+import VideoPage from "./pages/VideoPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             </Suspense>
           }
         />
+        <Route path="/video/*" element={<VideoPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
